@@ -1,0 +1,37 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d9fcd9;
+}
+
+.form-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    /* o el tamaño que prefieras */
+}
+
+input[type=text],
+input[type=password] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    /* espacio entre los campos del formulario */
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    /* color verde */
+    color: white;
+    /* texto blanco */
+    padding: 15px 20px;
+    border-radius: 5px;
+    /* bordes redondeados */
+}

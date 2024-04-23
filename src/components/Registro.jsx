@@ -8,7 +8,7 @@ const Registro = () => {
     const [variant, setVariant] = useState('danger');
 
     return (
-        <div className="App bg-light p-5">
+        <div className="form-container">
             <h2 className="mb-4">Crea una cuenta</h2>
             <div className="d-flex justify-content-center">
                 <SocialButton icon="Facebook" />
