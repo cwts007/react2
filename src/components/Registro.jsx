@@ -18,7 +18,7 @@ const Registro = () => {
                 <SocialButton icon="bi bi-github" />
                 <SocialButton icon="bi bi-linkedin" />
             </div>
-            <h4>O usa tu email para registrarte</h4>
+            <h6>O usa tu email para registrarte</h6>
 
             <div className='formContainer'>
                 <Formulario setAlert={setAlert} />
