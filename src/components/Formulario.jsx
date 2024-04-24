@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Alert from './Alert'; // Asegúrate de que la ruta de importación sea correcta
+import Alert from './Alert'; 
 
 const Formulario = () => {
     const [nombre, setNombre] = useState('');
@@ -13,7 +13,7 @@ const Formulario = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!nombre) {
-            setAlert({ message: 'El Nombre no puede estar vacío AWEONAO!!!!', variant: 'warning' });
+            setAlert({ message: 'El Nombre no puede estar vacío', variant: 'warning' });
         } else if (!password) {
             setAlert({ message: 'La contraseña no puede estar vacía', variant: 'danger' });
         } else if (password !== confirmPassword) {
