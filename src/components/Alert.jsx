@@ -2,9 +2,11 @@ import React from 'react';
 
 const Alert = ({ message, variant }) => {
     return (
-        <div className={`alert alert-${variant}`}>
-            {message}
-        </div>
+        message && variant && (
+            <div className={`alert alert-${variant}`}>
+                {message}
+            </div>
+        )
     );
 };
 

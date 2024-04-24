@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Alert from './Alert'; // Asegúrate de que la ruta de importación sea correcta
 
-const Formulario = ({ setAlert }) => {
+const Formulario = () => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [alert, setAlert] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,35 +25,30 @@ const Formulario = ({ setAlert }) => {
         }
     };
 
-
     return (
         <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formNombre">
-                <Form.Label>Nombre</Form.Label>
                 <Form.Control type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" />
             </Form.Group>
 
             <Form.Group controlId="formEmail">
-                <Form.Label>Email</Form.Label>
                 <Form.Control type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
             </Form.Group>
 
             <Form.Group controlId="formPassword">
-                <Form.Label>Contraseña</Form.Label>
                 <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Contraseña" />
             </Form.Group>
 
             <Form.Group controlId="formConfirmPassword">
-                <Form.Label>Confirma tu contraseña</Form.Label>
                 <Form.Control type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirma tu contraseña" />
             </Form.Group>
 
             <Button variant="success" type="submit">
                 Registrarse
             </Button>
+            <Alert message={alert?.message} variant={alert?.variant} />
         </Form>
     );
-
 };
 
 export default Formulario;

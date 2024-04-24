@@ -19,10 +19,13 @@ const Registro = () => {
                 <SocialButton icon="bi bi-linkedin" />
             </div>
             <h4>O usa tu email para registrarte</h4>
+
             <div className='formContainer'>
                 <Formulario setAlert={setAlert} />
             </div>
-            <Alert message={alert.message} variant={alert.variant} />
+            <div className='alertContainer'>
+                <Alert message={alert.message} variant={alert.variant} />
+            </div>
         </div>
     );
 };
