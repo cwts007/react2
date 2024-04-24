@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Formulario = ({ setAlert }) => {
+    const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,6 +19,7 @@ const Formulario = ({ setAlert }) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <input type="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" />
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Contraseña" />
             <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirma tu contraseña" />

@@ -1,10 +1,12 @@
 import React from 'react';
 
-const SocialButton = ({ icon }) => {
+const SocialButton = ({ icon, url }) => {
     return (
+
         <button>
             <i className={icon}></i>
         </button>
+
     );
 };
 
