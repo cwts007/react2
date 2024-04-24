@@ -1,8 +1,11 @@
 import React from 'react';
-import { Alert } from 'react-bootstrap';
 
-const AlertMessage = ({ message, variant }) => {
-    return <Alert variant={variant} className="mt-4">{message}</Alert>;
+const Alert = ({ message, variant }) => {
+    return (
+        <div className={`alert alert-${variant}`}>
+            {message}
+        </div>
+    );
 };
 
-export default AlertMessage;
+export default Alert;

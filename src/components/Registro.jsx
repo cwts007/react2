@@ -1,24 +1,17 @@
 import React, { useState } from 'react';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import SocialButton from './SocialButton';
 import Formulario from './Formulario';
-import AlertMessage from './Alert';
-import { ReactComponent as FacebookIcon } from './facebook.svg';
+import Alert from './Alert';
 
 const Registro = () => {
-    const [message, setMessage] = useState('');
-    const [variant, setVariant] = useState('danger');
+    const [alert, setAlert] = useState({ message: '', variant: 'danger' });
 
     return (
-        <div className="form-container">
-            <h2 className="mb-4">Crea una cuenta</h2>
-            <div className="d-flex justify-content-center">
-                <SocialButton icon={<FacebookIcon />} />
-                <SocialButton icon="Twitter" />
-                <SocialButton icon="necesito el icono" />
-            </div>
-            <Formulario />
-            <AlertMessage message={message} variant={variant} />
+        <div>
+            <h2>Registro</h2>
+            <SocialButton icon="bi bi-facebook" />
+            <Formulario setAlert={setAlert} />
+            <Alert message={alert.message} variant={alert.variant} />
         </div>
     );
 };
