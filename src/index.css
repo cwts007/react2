@@ -1,9 +1,10 @@
 body {
     margin: 0px;
+    background: linear-gradient(45deg, #A5FFB0 0%, #E5FD8C 100%);
 }
 
 #root {
-    background: linear-gradient(45deg, #A5FFB0 0%, #E5FD8C 100%);
+
 
     display: flex;
     align-items: center;
