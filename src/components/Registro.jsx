@@ -3,6 +3,8 @@ import SocialButton from './SocialButton';
 import Formulario from './Formulario';
 import Alert from './Alert';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const Registro = () => {
@@ -18,7 +20,7 @@ const Registro = () => {
             </div>
             <h4>O usa tu email para registrarte</h4>
             <div className='formContainer'>
-            <Formulario setAlert={setAlert} />
+                <Formulario setAlert={setAlert} />
             </div>
             <Alert message={alert.message} variant={alert.variant} />
         </div>
