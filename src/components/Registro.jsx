@@ -3,6 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import SocialButton from './SocialButton';
 import Formulario from './Formulario';
 import AlertMessage from './Alert';
+import { ReactComponent as FacebookIcon } from './facebook.svg';
 
 const Registro = () => {
     const [message, setMessage] = useState('');
@@ -12,7 +13,7 @@ const Registro = () => {
         <div className="form-container">
             <h2 className="mb-4">Crea una cuenta</h2>
             <div className="d-flex justify-content-center">
-                <SocialButton icon="bi bi-facebook" />
+                <SocialButton icon={<FacebookIcon />} />
                 <SocialButton icon="Twitter" />
                 <SocialButton icon="necesito el icono" />
             </div>
