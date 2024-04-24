@@ -8,7 +8,11 @@ const Formulario = ({ setAlert }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (password !== confirmPassword) {
+        if (!nombre) {
+            setAlert({ message: 'El Nombre no puede estar vacío AWEONAO!!!!', variant: 'danger' });
+        } else if (!password) {
+            setAlert({ message: 'La contraseña no puede estar vacía', variant: 'danger' });
+        } else if (password !== confirmPassword) {
             setAlert({ message: 'Las contraseñas no coinciden', variant: 'danger' });
         } else if (!email.includes('@')) {
             setAlert({ message: 'El formato del correo electrónico no es válido', variant: 'danger' });
@@ -16,6 +20,7 @@ const Formulario = ({ setAlert }) => {
             setAlert({ message: 'Registro exitoso', variant: 'success' });
         }
     };
+
 
     return (
         <form onSubmit={handleSubmit}>
