@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Alert from './Alert'; 
+import Alert from './Alert';
 
 const Formulario = () => {
     const [nombre, setNombre] = useState('');
@@ -12,6 +12,11 @@ const Formulario = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validación de contraseña
+        const hasNumber = /\d/.test(password); // Verifica si hay al menos un número
+        const hasUppercase = /[A-Z]/.test(password); // Verifica si hay al menos una letra mayúscula
+
         if (!nombre) {
             setAlert({ message: 'El Nombre no puede estar vacío', variant: 'warning' });
         } else if (!password) {
@@ -20,6 +25,8 @@ const Formulario = () => {
             setAlert({ message: 'Las contraseñas no coinciden', variant: 'danger' });
         } else if (!email.includes('@')) {
             setAlert({ message: 'El formato del correo electrónico no es válido', variant: 'warning' });
+        } else if (!hasNumber || !hasUppercase) {
+            setAlert({ message: 'La contraseña debe contener al menos un número y una letra mayúscula', variant: 'warning' });
         } else {
             setAlert({ message: 'Registro exitoso', variant: 'success' });
         }
