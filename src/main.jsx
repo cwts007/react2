@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Registro from '../src/components/Registro'
+import Registro from './App'
 import './index.css'
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Registro />
+    <App />
   </React.StrictMode>,
 )
